@@ -4,6 +4,7 @@ import MovieHeader from "./components/MovieHeader";
 import SearchBox from "./components/SearchBox";
 import Footer from './components/Footer'
 import FullPreview from "./components/FullPreview";
+import { Link, Route, Switch } from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     setMovies(responseJSON.Search);
     setHeading(responseJSON.Search)
     }
+    console.log(responseJSON.Search);
   }
   useEffect( () => {
     getMovieRequest(SearchVal);
@@ -32,6 +34,7 @@ function App() {
         <MovieHeader/>
         <Movie movies={movies} heading={heading}/>
       </div>
+      <FullPreview movies={movies}/>
     </>
   );
 }

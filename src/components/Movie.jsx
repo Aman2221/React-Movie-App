@@ -12,7 +12,6 @@ const Movie = (props) => {
                         <h4>{movie.Title}</h4>
                     </div>
                ))} 
-           
             </div>
         </>
     )
